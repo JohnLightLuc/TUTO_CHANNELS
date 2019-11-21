@@ -5,11 +5,11 @@ class Chat(models.Model):
     """Model definition for Chat."""
 
     # TODO: Define fields here
-    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='user')
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='user', null=True)
     message = models.TextField()
-    status = models.BooleanField(default=False)
+    statut = models.BooleanField(default=False)
     date_add = models.DateTimeField(auto_now_add=True)
-    date_update = models.DateTimeField(auto_now=False,)
+    date_up = models.DateTimeField(auto_now=False,)
 
     class Meta:
         """Meta definition for Chat."""
